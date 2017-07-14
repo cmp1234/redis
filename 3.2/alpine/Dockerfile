@@ -1,4 +1,4 @@
-FROM hicloudcmp/alpine-base:3.6
+FROM cmp1234/alpine-base:3.6
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN addgroup -S redis && adduser -S -G redis redis
