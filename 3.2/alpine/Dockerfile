@@ -1,7 +1,7 @@
 FROM cmp1234/alpine-base:3.6
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
-RUN addgroup -S redis && adduser -S -G redis redis
+RUN addgroup -S -g 18345 redis && adduser -S -u 18345 -G redis redis
 
 # grab su-exec for easy step-down from root
 RUN apk add --no-cache 'su-exec>=0.2'
