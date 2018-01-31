@@ -1,4 +1,4 @@
-FROM cmp1234/alpine-base:3.6
+FROM cmp1234/alpine-base:3.7
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN addgroup -S -g 18345 redis && adduser -S -u 18345 -G redis redis
@@ -6,9 +6,9 @@ RUN addgroup -S -g 18345 redis && adduser -S -u 18345 -G redis redis
 # grab su-exec for easy step-down from root
 RUN apk add --no-cache 'su-exec>=0.2'
 
-ENV REDIS_VERSION 3.2.5
-ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.2.5.tar.gz
-ENV REDIS_DOWNLOAD_SHA 8509ceb1efd849d6b2346a72a8e926b5a4f6ed3cc7c3cd8d9f36b2e9ba085315
+ENV REDIS_VERSION 3.2.8
+ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.2.8.tar.gz
+ENV REDIS_DOWNLOAD_SHA 6780d1abb66f33a97aad0edbe020403d0a15b67f
 
 # for redis-sentinel see: http://redis.io/topics/sentinel
 RUN set -ex; \
