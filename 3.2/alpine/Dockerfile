@@ -8,7 +8,7 @@ RUN apk add --no-cache 'su-exec>=0.2'
 
 ENV REDIS_VERSION 3.2.8
 ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.2.8.tar.gz
-ENV REDIS_DOWNLOAD_SHA 6780d1abb66f33a97aad0edbe020403d0a15b67f
+ENV REDIS_DOWNLOAD_SHA 61b373c23d18e6cc752a69d5ab7f676c6216dc2853e46750a8c4ed791d68482c
 
 # for redis-sentinel see: http://redis.io/topics/sentinel
 RUN set -ex; \
